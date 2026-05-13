@@ -22,7 +22,7 @@ const CreateNodeForm: React.FC<CreateNodeFormProps> = ({ projectId, onNodeCreate
     try {
       const token = localStorage.getItem('token');
       await axios.post(
-        `http://localhost:5000/api/projects/${projectId}/nodes`,
+        `https://arg-nexus-backend.onrender.com/api/projects/${projectId}/nodes`,
         formData,
         { headers: { Authorization: `Bearer ${token}` } }
       );
